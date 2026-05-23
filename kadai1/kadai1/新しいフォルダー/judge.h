@@ -1,0 +1,3 @@
+#pragma once
+// ”äŠr‚ÆŒ‹‰Ê‚ð•\Ž¦
+int judge();
