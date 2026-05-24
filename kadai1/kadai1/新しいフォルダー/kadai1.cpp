@@ -1,25 +1,23 @@
-﻿#include<stdio.h>
-#include<stdint.h>
-#include<time.h>
-#include"input.h"
+﻿#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <time.h>
+#include "input.h"
 #include "judge.h"
+
 int main()
+
 {
-	int rand();
-	//コンピュータの時間を変数に代入
-	//int t = (int)time(nullptr);
-	//int answer = t % 10;
-	// 入力した数字を変数 input に代入する
-	while(true)
-	{
-		int input();
+    int rand();
 
-		int judge();
+    // キーボードで押した数を変数 input に代入する
+    while (true)
+    {
+        int input();
+        int judge(int answer, int input);
 
-		if (rank = 1)
-		{
-			break;
-		}
-	}
-	return 0;
+    }
+    return 0;
+
 }

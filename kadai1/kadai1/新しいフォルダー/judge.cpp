@@ -1,27 +1,18 @@
 #include <stdio.h>
 #include <stdint.h>
-#include "input.h"
-
-void judge()
+#include"input.h"
+void judge(int answer , int input)
 {
-	extern int answer;
-	extern int input;
-	int rank = 0;
-	// answer ‚Æ input ‚Ì”’l‚ªˆê’v‚Ì‚İuˆê’vv‚Æ•\¦	
-	int sub = answer - input;
-	if (answer == input)
+	if (answer < input)
 	{
-		rank = 1;
-		printf("ˆê’v\n");
+		printf("‘å‚«‚¢‚Ë\n");
 	}
 	if (answer > input)
 	{
-		rank = 2;
-		printf("¬‚³‚¢\n");
+		printf("¬‚³‚¢‚Ë\n");
 	}
-	if (answer < input)
+	if (answer = input)
 	{
-		rank = 2;
-		printf("‘å‚«‚¢\n");
+		printf("³‰ğ‚¾\n");
 	}
 }
