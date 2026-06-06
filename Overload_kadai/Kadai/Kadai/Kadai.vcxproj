@@ -124,6 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Kadai.cpp" />
+    <ClCompile Include="OverLoad.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OverLoad.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
