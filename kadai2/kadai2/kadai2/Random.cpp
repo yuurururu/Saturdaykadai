@@ -5,7 +5,7 @@ void Random ()
 {
 	int answer[4];
 	Random::Random();
-	Random::makeRandom
+	Random::makeRandom;
 
 
 }
