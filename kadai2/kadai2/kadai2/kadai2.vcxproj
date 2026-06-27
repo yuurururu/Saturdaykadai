@@ -127,13 +127,13 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="kadai2.cpp" />
     <ClCompile Include="Random.cpp" />
-    <ClCompile Include="ShowResul.cpp" />
+    <ClCompile Include="Result.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Compare.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Random.h" />
-    <ClInclude Include="ShowResul.h" />
+    <ClInclude Include="Result.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
