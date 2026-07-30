@@ -1,5 +1,15 @@
 #pragma once
-class Sword
+#include "Character.h"
+// Œ•ŽmƒNƒ‰ƒX
+class Sword final:public CharacterBase
 {
+public:
+	Sword() = default;
+
+	~Sword() = default;
+
+	void initializeType() override;
+
+	void updateWhenStartTurn() override;
 };
 
