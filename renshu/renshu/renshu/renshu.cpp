@@ -1,20 +1,61 @@
-﻿// renshu.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
-//
-
-#include <iostream>
+﻿#include <iostream>
+#include <cstdlib>
+#include <time.h>
+#include <stdlib.h>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
+    int playerHP = 100;
+    int playerAttack = 50;
+    int command;
+
+    int enemyHP = 300;
+    int enemyAttack = 30;
+
+    std::cout << "体力: " << playerHP << std::endl;
+    std::cout << "攻撃力: " << playerAttack << std::endl;
+
+    std::cout << "体力: " << enemyHP << std::endl;
+    std::cout << "攻撃力: " << enemyAttack << std::endl;
+
+    while (true)
+    {
+        std::cout << "1:攻撃 2:回復 " << std::endl;
+        std::cin >> command;
+        
+        if (command == 1)
+        {
+            enemyHP -= playerAttack;
+        }
+        else if (command == 2)
+        {
+            playerHP += 50;
+        }
+        if (playerHP > 100)
+        {
+            playerHP = 100;
+        }
+        if (enemyHP <= 0)
+        {
+            enemyHP = 0;
+            std::cout << "勝ち" << std::endl;
+            break;
+        }
+        playerHP -= enemyAttack;
+
+        if (playerHP <= 0)
+        {
+            playerHP = 0;
+            std::cout << "ハイボール" << std::endl;
+            break;
+        }
+        std::cout << "敵の体力 : " << enemyHP << std::endl;
+        std::cout << "自分の体力 : " << playerHP << std::endl;
+
+    }
+
+    std::cout << "残り体力 : " << playerHP << std::endl;
+    return 0 ;
 }
-
-// プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
-// プログラムのデバッグ: F5 または [デバッグ] > [デバッグの開始] メニュー
-
-// 作業を開始するためのヒント: 
-//    1. ソリューション エクスプローラー ウィンドウを使用してファイルを追加/管理します 
-//   2. チーム エクスプローラー ウィンドウを使用してソース管理に接続します
-//   3. 出力ウィンドウを使用して、ビルド出力とその他のメッセージを表示します
-//   4. エラー一覧ウィンドウを使用してエラーを表示します
-//   5. [プロジェクト] > [新しい項目の追加] と移動して新しいコード ファイルを作成するか、[プロジェクト] > [既存の項目の追加] と移動して既存のコード ファイルをプロジェクトに追加します
-//   6. 後ほどこのプロジェクトを再び開く場合、[ファイル] > [開く] > [プロジェクト] と移動して .sln ファイルを選択します
